@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\SimpleBLEBroadcaster.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\..\..\..\..\BLE-CC254x-1.4.2.2\Projects\ble\SimpleBLEPeripheral\CC2541DB\SimpleBLEPeripheral.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>

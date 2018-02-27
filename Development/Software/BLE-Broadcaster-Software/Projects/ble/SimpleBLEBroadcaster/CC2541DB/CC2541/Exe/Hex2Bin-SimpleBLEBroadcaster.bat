@@ -1,0 +1,1 @@
+srec_cat.exe SimpleBLEBroadcaster.hex -Intel -o  SimpleBLEBroadcaster.bin -Binary
