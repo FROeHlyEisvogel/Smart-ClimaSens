@@ -18,3 +18,4 @@ Which knowledge or skills are needed to build a Smart-ClimaSens device?
 All you need is basic knowledge in soldering.
 
 The Smart-ClimaSens can be used with pimatic, an installation guide can be found here:
+https://github.com/FROeHlyEisvogel/Smart-ClimaSens/blob/master/Instructions/Introduction%20(windows).pdf
