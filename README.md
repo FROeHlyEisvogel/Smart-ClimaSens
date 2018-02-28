@@ -1,6 +1,8 @@
 Smart-ClimaSens
 ====================
 
+The Smart-ClimaSens can be used with pimatic, an installation guide can be found here:https://github.com/FROeHlyEisvogel/Smart-ClimaSens/blob/master/Instructions/Introduction%20(windows).pdf
+
 What is Smart-ClimaSens?
 ------------------------
 It is a wireless sensor for measuring the indoor climate.
@@ -16,7 +18,3 @@ The Smart-ClimaSens device measures different data like temperature, humidity, l
 Which knowledge or skills are needed to build a Smart-ClimaSens device?
 -----------------------------------------------------------------------
 All you need is basic knowledge in soldering.
-
-
-The Smart-ClimaSens can be used with pimatic, an installation guide can be found here:
-https://github.com/FROeHlyEisvogel/Smart-ClimaSens/blob/master/Instructions/Introduction%20(windows).pdf
