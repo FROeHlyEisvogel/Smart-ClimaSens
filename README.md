@@ -1,7 +1,8 @@
 Smart-ClimaSens
 ====================
 
-The Smart-ClimaSens can be used with pimatic, an installation guide can be found here:https://github.com/FROeHlyEisvogel/Smart-ClimaSens/blob/master/Instructions/Introduction%20(windows).pdf
+The Smart-ClimaSens can be used with pimatic, an installation guide can be found here:
+https://github.com/FROeHlyEisvogel/Smart-ClimaSens/blob/master/Instructions/Introduction%20(windows).pdf
 
 What is Smart-ClimaSens?
 ------------------------
