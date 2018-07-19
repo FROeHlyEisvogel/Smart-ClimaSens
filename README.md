@@ -1,6 +1,8 @@
-# Introduction
+Introduction
+==============
 
-# Smart-ClimaSens
+Smart-ClimaSens
+---------------
 
 This document gives an overview about the Smart-ClimaSens project.
 
