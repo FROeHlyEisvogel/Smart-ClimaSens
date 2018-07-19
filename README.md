@@ -1,6 +1,4 @@
 # Introduction
---------------
---------------
 
 # Smart-ClimaSens
 
