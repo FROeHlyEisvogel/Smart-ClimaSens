@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [ClimaSens-Touch.PrjPcb]
+   Generated File[ClimaSens-Touch.TXT]
+   Generated File[ClimaSens-Touch.LDP]
+   Generated File[ClimaSens-Touch.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 14:51:23 On 11.02.2019

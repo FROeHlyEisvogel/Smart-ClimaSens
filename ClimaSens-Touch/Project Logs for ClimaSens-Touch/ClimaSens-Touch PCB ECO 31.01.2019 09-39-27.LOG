@@ -1,0 +1,47 @@
+Added Component: Designator=C1(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C2(0805)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D1(LED 3mm)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC1(JDY-08 CC2541)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC2(Touch)
+Add component. Clean all parameters for all variants
+Added Component: Designator=P1(ProgramPort)
+Add component. Clean all parameters for all variants
+Added Component: Designator=V1(Battery-Clip)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=GND Pin=IC1-17
+Added Pin To Net: NetName=GND Pin=IC2-1
+Added Pin To Net: NetName=GND Pin=P1-5
+Added Pin To Net: NetName=GND Pin=V1-2
+Added Net: Name=GND
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=NetC1_1 Pin=D1-1
+Added Pin To Net: NetName=NetC1_1 Pin=IC1-19
+Added Net: Name=NetC1_1
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC1_2 Pin=D1-2
+Added Pin To Net: NetName=NetC1_2 Pin=IC1-20
+Added Net: Name=NetC1_2
+Added Pin To Net: NetName=NetIC1_2 Pin=IC1-2
+Added Pin To Net: NetName=NetIC1_2 Pin=P1-3
+Added Net: Name=NetIC1_2
+Added Pin To Net: NetName=NetIC1_3 Pin=IC1-3
+Added Pin To Net: NetName=NetIC1_3 Pin=P1-4
+Added Net: Name=NetIC1_3
+Added Pin To Net: NetName=NetIC1_18 Pin=IC1-18
+Added Pin To Net: NetName=NetIC1_18 Pin=P1-2
+Added Net: Name=NetIC1_18
+Added Pin To Net: NetName=NetIC1_24 Pin=IC1-24
+Added Pin To Net: NetName=NetIC1_24 Pin=IC2-2
+Added Net: Name=NetIC1_24
+Added Pin To Net: NetName=Vcc Pin=C2-1
+Added Pin To Net: NetName=Vcc Pin=IC1-1
+Added Pin To Net: NetName=Vcc Pin=IC2-3
+Added Pin To Net: NetName=Vcc Pin=P1-1
+Added Pin To Net: NetName=Vcc Pin=V1-1
+Added Net: Name=Vcc
+Added Class: Name=ClimaSens-Touch

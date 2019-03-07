@@ -1,0 +1,12 @@
+[0307/151138:ERROR:tcp_socket_win.cc(335)] bind() returned an error: Normalerweise darf jede Socketadresse (Protokoll, Netzwerkadresse oder Anschluss) nur jeweils einmal verwendet werden. (0x2740)
+[0307/151138:ERROR:devtools_http_handler.cc(229)] Cannot start http server for devtools. Stop devtools.
+[0307/151138:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0307/151138:ERROR:cache_util.cc(134)] Unable to move cache folder C:\ProgramData\Altium\Altium NEXUS {7F8A57FE-C68C-415C-AAE0-DD7BEB601A39}\BrowserCache\GPUCache to C:\ProgramData\Altium\Altium NEXUS {7F8A57FE-C68C-415C-AAE0-DD7BEB601A39}\BrowserCache\old_GPUCache_000
+[0307/151138:ERROR:cache_creator.cc(129)] Unable to create cache
+[0307/151138:ERROR:shader_disk_cache.cc(589)] Shader Cache Creation failed: -2
+[0307/151253:ERROR:tcp_socket_win.cc(335)] bind() returned an error: Normalerweise darf jede Socketadresse (Protokoll, Netzwerkadresse oder Anschluss) nur jeweils einmal verwendet werden. (0x2740)
+[0307/151253:ERROR:devtools_http_handler.cc(229)] Cannot start http server for devtools. Stop devtools.
+[0307/151256:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[0307/151256:ERROR:cache_util.cc(134)] Unable to move cache folder C:\ProgramData\Altium\Altium NEXUS {7F8A57FE-C68C-415C-AAE0-DD7BEB601A39}\BrowserCache\GPUCache to C:\ProgramData\Altium\Altium NEXUS {7F8A57FE-C68C-415C-AAE0-DD7BEB601A39}\BrowserCache\old_GPUCache_000
+[0307/151256:ERROR:cache_creator.cc(129)] Unable to create cache
+[0307/151256:ERROR:shader_disk_cache.cc(589)] Shader Cache Creation failed: -2

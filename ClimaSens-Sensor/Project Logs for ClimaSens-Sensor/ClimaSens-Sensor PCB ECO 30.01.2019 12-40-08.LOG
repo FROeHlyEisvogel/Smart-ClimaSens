@@ -1,0 +1,14 @@
+Added Component: Designator=(JDY-08 CC2541)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=Vcc Pin=-1
+Added Pin To Net: NetName=Net_2 Pin=-2
+Added Pin To Net: NetName=Net_3 Pin=-3
+Added Pin To Net: NetName=Net_7 Pin=-7
+Added Pin To Net: NetName=Net_8 Pin=-8
+Added Pin To Net: NetName=Net_11 Pin=-11
+Added Pin To Net: NetName=Net_12 Pin=-12
+Added Pin To Net: NetName=GND Pin=-17
+Added Pin To Net: NetName=Net_18 Pin=-18
+Added Pin To Net: NetName=Net_19 Pin=-19
+Added Pin To Net: NetName=Net_20 Pin=-20
+Added Member To Class: ClassName=ClimaSens-Sensor Member=Component  JDY-08 CC2541

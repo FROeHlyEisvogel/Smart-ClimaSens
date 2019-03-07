@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [ClimaSens-Sensor.PrjPcb]
+   Generated File[ClimaSens-Sensor.TXT]
+   Generated File[ClimaSens-Sensor.LDP]
+   Generated File[ClimaSens-Sensor.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 14:52:00 On 11.02.2019

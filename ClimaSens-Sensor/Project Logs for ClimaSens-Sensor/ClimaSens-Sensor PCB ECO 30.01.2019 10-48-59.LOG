@@ -1,0 +1,8 @@
+Added Component: Designator=P1(ProgramPort)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=Vcc Pin=P1-1
+Added Pin To Net: NetName=Net_18 Pin=P1-2
+Added Pin To Net: NetName=Net_2 Pin=P1-3
+Added Pin To Net: NetName=Net_3 Pin=P1-4
+Added Pin To Net: NetName=GND Pin=P1-5
+Added Member To Class: ClassName=ClimaSens-Sensor Member=Component P1 Vcc

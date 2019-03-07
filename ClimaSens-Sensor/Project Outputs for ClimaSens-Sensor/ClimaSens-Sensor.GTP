@@ -1,0 +1,21 @@
+G04*
+G04 #@! TF.GenerationSoftware,Altium Limited,Altium NEXUS,1.0.9 (89)*
+G04*
+G04 Layer_Color=8421504*
+%FSLAX42Y42*%
+%MOMM*%
+G71*
+G01*
+G75*
+G04:AMPARAMS|DCode=11|XSize=4mm|YSize=5mm|CornerRadius=0mm|HoleSize=0mm|Usage=FLASHONLY|Rotation=270.000|XOffset=0mm|YOffset=0mm|HoleType=Round|Shape=Octagon|*
+%AMOCTAGOND11*
+4,1,8,2.50,1.00,2.50,-1.00,1.50,-2.00,-1.50,-2.00,-2.50,-1.00,-2.50,1.00,-1.50,2.00,1.50,2.00,2.50,1.00,0.0*
+%
+%ADD11OCTAGOND11*%
+
+D11*
+X8611Y9500D02*
+D03*
+X8585Y6604D02*
+D03*
+M02*

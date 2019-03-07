@@ -1,0 +1,12 @@
+Change Component Comment : Designator=IC1 Old Comment=* New Comment=JDY-08 CC2541
+Change Component Designator: OldDesignator=1 NewDesignator=K1
+Added Pin To Net: NetName=Net1_1 Pin=1-1
+Added Pin To Net: NetName=Net1_1 Pin=IC1-1
+Added Net: Name=Net1_1
+Added Pin To Net: NetName=NetIC1_7 Pin=IC1-7
+Added Pin To Net: NetName=NetIC1_7 Pin=K1-2
+Added Net: Name=NetIC1_7
+Added Pin To Net: NetName=NetIC1_8 Pin=IC1-8
+Added Pin To Net: NetName=NetIC1_8 Pin=K1-1
+Added Net: Name=NetIC1_8
+Added Member To Class: ClassName=ClimaSens-Sensor Member=Component K1 Reed

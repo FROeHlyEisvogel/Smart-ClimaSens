@@ -1,0 +1,12 @@
+Added Component: Designator=D1(LED 3mm)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC1(JDY-08 CC2541)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC02(Si7021)
+Add component. Clean all parameters for all variants
+Added Component: Designator=V1(Battery-Clip)
+Add component. Clean all parameters for all variants
+Added Member To Class: ClassName=ClimaSens-Sensor Member=Component D1 *
+Added Member To Class: ClassName=ClimaSens-Sensor Member=Component IC1 *
+Added Member To Class: ClassName=ClimaSens-Sensor Member=Component IC02 *
+Added Member To Class: ClassName=ClimaSens-Sensor Member=Component V1 Vcc

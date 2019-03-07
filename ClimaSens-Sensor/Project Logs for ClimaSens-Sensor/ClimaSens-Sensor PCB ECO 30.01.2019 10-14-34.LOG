@@ -1,0 +1,39 @@
+Removed Member From Class: ClassName=ClimaSens-Sensor Member=IC1
+Removed Member From Class: ClassName=ClimaSens-Sensor Member=IC02
+Change Component Comment : Designator=D1 Old Comment=* New Comment=LED
+Change Component Comment : Designator=C1 Old Comment= New Comment=10nF
+Change Component Designator: OldDesignator=1 NewDesignator=V1
+Added Component: Designator=IC2(Si7021)
+Add component. Clean all parameters for all variants
+Added Component: Designator=(JDY-08 CC2541)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=Net_1 Pin=-1
+Added Pin To Net: NetName=Net_1 Pin=IC2-1
+Added Pin To Net: NetName=Net_1 Pin=V1-1
+Added Net: Name=Net_1
+Added Pin To Net: NetName=Net_7 Pin=-7
+Added Pin To Net: NetName=Net_7 Pin=K1-2
+Added Net: Name=Net_7
+Added Pin To Net: NetName=Net_8 Pin=-8
+Added Pin To Net: NetName=Net_8 Pin=K1-1
+Added Net: Name=Net_8
+Added Pin To Net: NetName=Net_11 Pin=-11
+Added Pin To Net: NetName=Net_11 Pin=IC2-3
+Added Net: Name=Net_11
+Added Pin To Net: NetName=Net_12 Pin=-12
+Added Pin To Net: NetName=Net_12 Pin=IC2-4
+Added Net: Name=Net_12
+Added Pin To Net: NetName=Net_17 Pin=-17
+Added Pin To Net: NetName=Net_17 Pin=IC2-2
+Added Pin To Net: NetName=Net_17 Pin=V1-2
+Added Net: Name=Net_17
+Added Pin To Net: NetName=Net_19 Pin=-19
+Added Pin To Net: NetName=Net_19 Pin=C1-1
+Added Pin To Net: NetName=Net_19 Pin=D1-1
+Added Net: Name=Net_19
+Added Pin To Net: NetName=Net_20 Pin=-20
+Added Pin To Net: NetName=Net_20 Pin=C1-2
+Added Pin To Net: NetName=Net_20 Pin=D1-2
+Added Net: Name=Net_20
+Added Member To Class: ClassName=ClimaSens-Sensor Member=Component IC2 Si7021
+Added Member To Class: ClassName=ClimaSens-Sensor Member=Component  JDY-08 CC2541

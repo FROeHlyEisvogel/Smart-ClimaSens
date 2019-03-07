@@ -1,0 +1,5 @@
+Added Component: Designator=D1(LED 3mm)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=Net_19 Pin=D1-1
+Added Pin To Net: NetName=Net_20 Pin=D1-2
+Added Member To Class: ClassName=ClimaSens-Sensor Member=Component D1 LED
