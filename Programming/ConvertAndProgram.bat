@@ -1,2 +1,2 @@
-srec_cat.exe SimpleBLEBroadcaster.hex -Intel -o  SimpleBLEBroadcaster.bin -Binary
-CCLoader.exe 5 SimpleBLEBroadcaster.bin 0
+srec_cat.exe ClimaSens-Sensor.hex -Intel -o  ClimaSens-Sensor.bin -Binary
+CCLoader.exe 9 ClimaSens-Sensor.bin 0
