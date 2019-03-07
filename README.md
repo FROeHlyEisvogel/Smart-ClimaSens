@@ -1,7 +1,7 @@
 # Introduction
 
 ### New: Android App available
-https://github.com/FROeHlyEisvogel/ClimaSens-Scanner/blob/master/Application/build/outputs/apk/debug/ClimaSensScanner-debug.apk
+https://github.com/FROeHlyEisvogel/ClimaSens-Scanner/raw/master/Application/build/outputs/apk/debug/ClimaSensScanner-debug.apk
 
 # Smart-ClimaSens
 
