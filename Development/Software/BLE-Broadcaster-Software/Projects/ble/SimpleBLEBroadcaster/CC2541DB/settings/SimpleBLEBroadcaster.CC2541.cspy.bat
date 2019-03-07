@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\settings\SimpleBLEBroadcaster.CC2541.general.xcl" --backend -f "D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\settings\SimpleBLEBroadcaster.CC2541.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\settings\SimpleBLEBroadcaster.CC2541.general.xcl" --backend -f "C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\settings\SimpleBLEBroadcaster.CC2541.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\common\bin\cspybat" -f "D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\settings\SimpleBLEBroadcaster.CC2541.general.xcl" "--debug_file=%~1" --backend -f "D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\settings\SimpleBLEBroadcaster.CC2541.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\settings\SimpleBLEBroadcaster.CC2541.general.xcl" "--debug_file=%~1" --backend -f "C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\settings\SimpleBLEBroadcaster.CC2541.driver.xcl" 
 
 @echo off 
 :end

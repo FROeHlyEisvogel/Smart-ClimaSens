@@ -30,7 +30,7 @@
  */
 
 // What is the advertising interval when device is discoverable (units of 625us, 160=100ms)
-#define DEFAULT_ADVERTISING_INTERVAL          (1600 * 10)
+#define DEFAULT_ADVERTISING_INTERVAL          (400)     // (160)
 
 // Company Identifier: Texas Instruments Inc. (13)
 #define TI_COMPANY_ID                         0x000D
@@ -60,21 +60,17 @@ static uint8 simpleBLEBroadcaster_TaskID;   // Task ID for internal task/event p
 static uint8 scanRspData[] =
 {
   // complete name
-  0x0E,   // length of this data
+  0x0A,   // length of this data
   GAP_ADTYPE_LOCAL_NAME_COMPLETE,
   'C',
   'l',
   'i',
   'm',
   'a',
-  't',
-  'e',
   'S',
   'e',
   'n',
   's',
-  'o',
-  'r',
 
   // Tx power level
   0x02,   // length of this data
@@ -93,7 +89,7 @@ static uint8 advertData[] =
   GAP_ADTYPE_FLAGS,
   GAP_ADTYPE_FLAGS_BREDR_NOT_SUPPORTED,
   
-  0x10,   // length of this data including the data type byte
+  0x12,   // length of this data including the data type byte
   GAP_ADTYPE_MANUFACTURER_SPECIFIC,      // manufacturer specific advertisement data type
   13,   // MSB Company ID
   0,    // LSB Company ID
@@ -107,9 +103,11 @@ static uint8 advertData[] =
   0,    // LSB Temperature
   0,    // MSB Humidity
   0,    // LSB Humidity
-  0,    // MSB Barometirc
-  0,    // LSB Barometirc
-  0     // Open/Close
+  0,    // MSB Barometric
+  0,    // LSB Barometric
+  0,    // Open/Close
+  0,    // MSB Power
+  0     // LSB Power
 };
 
 /*********************************************************************
@@ -237,6 +235,12 @@ uint16 SimpleBLEBroadcaster_ProcessEvent( uint8 task_id, uint16 events )
     return ( events ^ SBP_STOP_ADVERTISE );
   }
   
+  if ( events & SBP_UPDATE_ADVERTISE ) {
+    LL_SetAdvData (sizeof( advertData ), advertData);
+    
+    return ( events ^ SBP_UPDATE_ADVERTISE );
+  }
+  
   // Discard unknown events
   return 0;
 }
@@ -295,6 +299,14 @@ void Advertise_single (void) {
   osal_start_timerEx ( simpleBLEBroadcaster_TaskID, SBP_STOP_ADVERTISE, 4 );
 }
 
+void Advertise_count (uint8 count) {
+  LL_SetAdvData (sizeof( advertData ), advertData);
+  
+  LL_SetAdvControl (LL_ADV_MODE_ON);
+  osal_start_timerEx ( simpleBLEBroadcaster_TaskID, SBP_STOP_ADVERTISE, 250 * (count - 1) + 4);
+  //osal_start_timerEx ( simpleBLEBroadcaster_TaskID, SBP_STOP_ADVERTISE, 100 * (count - 1) * 2 + 4);
+}
+
 void AdverisingUpdate_Internal_Voltage (uint16 Voltage) {
   advertData[7] = (Voltage >> 8);
   advertData[8] = Voltage;
@@ -325,6 +337,18 @@ void AdverisingUpdate_Barometric (uint16 Barometric) {
   advertData[18] = Barometric;
 }
 
-void AdverisingUpdate_Contact (uint8 Contact) {
-  advertData[19] = Contact;
+void AdverisingUpdate_Contact (uint8 Mask, uint8 State) {
+  if (State == 1) {
+    advertData[19] = advertData[19] | Mask;
+  }
+  else {
+    advertData[19] = advertData[19] & ~Mask;
+  }
 }
+
+void AdverisingUpdate_Powermeter (uint16 Power) {
+  advertData[20] = (Power >> 8);
+  advertData[21] = Power;
+}
+
+//LL_ConnectionCompleteCback

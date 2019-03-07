@@ -1,88 +1,91 @@
-"D:\BLE-BROADCASTER-SOFTWARE\Projects\ble\SIMPLEBLEBROADCASTER\Source\simpleBLEBroadcaster.c"
+"C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\Source\simpleBLEBroadcaster.c"
 -std=c99
--ferror-limit=100
+-ferror-limit=0
+-fbracket-depth=512
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\common
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\Source
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\include
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\common
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\hal\include
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\include
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\hal\target\CC2540EB
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\hal\include
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\osal\include
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\hal\target\CC2540EB
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\services\saddr
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\osal\include
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\include
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\services\saddr
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\controller\CC254x\phy
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\include
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\controller\CC254x\include
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\controller\CC254x\phy
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\hci
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\controller\CC254x\include
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\host
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\hci
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\ROM
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\host
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\common\cc2540
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\..\..\Components\ble\ROM
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\common\npi\npi_np
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\common\cc2540
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\Profiles\Roles\CC254x
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\common\npi\npi_np
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\Profiles\Roles
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\Profiles\Roles\CC254x
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\Profiles\SimpleProfile\CC254x
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\Profiles\Roles
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\Profiles\SimpleProfile
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\Profiles\SimpleProfile\CC254x
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\Profiles\DevInfo
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\Profiles\SimpleProfile
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\inc
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\SimpleBLEBroadcaster\CC2541DB\..\..\Profiles\DevInfo
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\lib\dlib
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\8051\inc
 -I
-C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.0\8051\inc\clib
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\8051\lib\dlib
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\common
+C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\8051\inc\clib
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\include
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\common
 -I
-D:\BLE-Broadcaster-Software\Components\hal\include
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\include
 -I
-D:\BLE-Broadcaster-Software\Components\hal\target\CC2540EB
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Components\hal\include
 -I
-D:\BLE-Broadcaster-Software\Components\osal\include
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Components\hal\target\CC2540EB
 -I
-D:\BLE-Broadcaster-Software\Components\services\saddr
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Components\osal\include
 -I
-D:\BLE-Broadcaster-Software\Components\ble\include
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Components\services\saddr
 -I
-D:\BLE-Broadcaster-Software\Components\ble\controller\CC254x\phy
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Components\ble\include
 -I
-D:\BLE-Broadcaster-Software\Components\ble\controller\CC254x\include
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Components\ble\controller\CC254x\phy
 -I
-D:\BLE-Broadcaster-Software\Components\ble\hci
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Components\ble\controller\CC254x\include
 -I
-D:\BLE-Broadcaster-Software\Components\ble\host
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Components\ble\hci
 -I
-D:\BLE-Broadcaster-Software\Components\ble\ROM
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Components\ble\host
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\common\cc2540
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Components\ble\ROM
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\common\npi\npi_np
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\common\cc2540
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\Profiles\Roles\CC254x
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\common\npi\npi_np
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\Profiles\Roles
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\Profiles\Roles\CC254x
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\Profiles\SimpleProfile\CC254x
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\Profiles\Roles
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\Profiles\SimpleProfile
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\Profiles\SimpleProfile\CC254x
 -I
-D:\BLE-Broadcaster-Software\Projects\ble\Profiles\DevInfo
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\Profiles\SimpleProfile
+-I
+C:\Data\MEA.rep\Virtual-Tausch\BLE-Broadcaster-Software\Projects\ble\Profiles\DevInfo
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -201,9 +204,9 @@ D:\BLE-Broadcaster-Software\Projects\ble\Profiles\DevInfo
 -D__JMP_BUF_ELEMENT_TYPE__=signed char
 -D__JMP_BUF_NUM_ELEMENTS__=49
 -D__TID__=0x2000
--D__VER__=1010
+-D__VER__=1030
 -D__SUBVERSION__=1
--D__BUILD_NUMBER__=4655
+-D__BUILD_NUMBER__=6000
 -D__IAR_SYSTEMS_ICC__=8
 -D__VA_STACK_DECREASING__=1
 -D__VA_STACK_ALIGN__=1
@@ -216,8 +219,6 @@ D:\BLE-Broadcaster-Software\Projects\ble\Profiles\DevInfo
 -D__WCHAR_T_MAX__=0xffffU
 -D__DEF_PTR_MEM__=__xdata
 -D__DEF_PTR_SIZE__=2
--D__CODE_MEMORY_LIST3__(_P1,_P2)=__CODE_MEM_HELPER3__(__tiny_func, 0, _P1, _P2) __CODE_MEM_HELPER3__(__overlay_tiny_func, 1, _P1, _P2) __CODE_MEM_HELPER3__(__overlay_near_func, 2, _P1, _P2) __CODE_MEM_HELPER3__(__near_func, 3, _P1, _P2) __CODE_MEM_HELPER3__(__banked_func, 4, _P1, _P2)
--D__DATA_MEMORY_LIST3__(_P1,_P2)=__DATA_MEM_HELPER3__(__sfr, 0, _P1, _P2) __DATA_MEM_HELPER3__(__bit, 1, _P1, _P2) __DATA_MEM_HELPER3__(__data, 2, _P1, _P2) __DATA_MEM_HELPER3__(__idata, 3, _P1, _P2) __DATA_MEM_HELPER3__(__bdata, 4, _P1, _P2) __DATA_MEM_HELPER3__(__pdata, 5, _P1, _P2) __DATA_MEM_HELPER3__(__xdata, 6, _P1, _P2) __DATA_MEM_HELPER3__(__ixdata, 7, _P1, _P2) __DATA_MEM_HELPER3__(__xdata_rom, 8, _P1, _P2) __DATA_MEM_HELPER3__(__generic, 9, _P1, _P2) __DATA_MEM_HELPER3__(__code, 10, _P1, _P2)
 -D__DATA_MEM0__=__sfr
 -D__DATA_MEM0_POINTER_OK__=0
 -D__DATA_MEM0_UNIQUE_POINTER__=0
@@ -342,16 +343,10 @@ D:\BLE-Broadcaster-Software\Projects\ble\Profiles\DevInfo
 -D__CODE_MEM4_POINTER_OK__=1
 -D__CODE_MEM4_UNIQUE_POINTER__=1
 -D__CODE_MEM4_VAR_OK__=1
--D__CODE_PTR_MEMORY_LIST3__(_P1,_P2)=__CODE_PTR_MEM_HELPER3__(__tiny_func, 0, _P1, _P2) __CODE_PTR_MEM_HELPER3__(__overlay_tiny_func, 1, _P1, _P2) __CODE_PTR_MEM_HELPER3__(__overlay_near_func, 2, _P1, _P2) __CODE_PTR_MEM_HELPER3__(__near_func, 3, _P1, _P2) __CODE_PTR_MEM_HELPER3__(__banked_func, 4, _P1, _P2)
--D__DATA_PTR_MEMORY_LIST3__(_P1,_P2)=__DATA_PTR_MEM_HELPER3__(__data, 2, _P1, _P2) __DATA_PTR_MEM_HELPER3__(__idata, 3, _P1, _P2) __DATA_PTR_MEM_HELPER3__(__bdata, 4, _P1, _P2) __DATA_PTR_MEM_HELPER3__(__pdata, 5, _P1, _P2) __DATA_PTR_MEM_HELPER3__(__xdata, 6, _P1, _P2) __DATA_PTR_MEM_HELPER3__(__ixdata, 7, _P1, _P2) __DATA_PTR_MEM_HELPER3__(__xdata_rom, 8, _P1, _P2) __DATA_PTR_MEM_HELPER3__(__generic, 9, _P1, _P2) __DATA_PTR_MEM_HELPER3__(__code, 10, _P1, _P2)
--D__VAR_MEMORY_LIST3__(_P1,_P2)=__VAR_MEM_HELPER3__(__data, 2, _P1, _P2) __VAR_MEM_HELPER3__(__idata, 3, _P1, _P2) __VAR_MEM_HELPER3__(__bdata, 4, _P1, _P2) __VAR_MEM_HELPER3__(__pdata, 5, _P1, _P2) __VAR_MEM_HELPER3__(__xdata, 6, _P1, _P2) __VAR_MEM_HELPER3__(__ixdata, 7, _P1, _P2)
 -D__HEAP_MEM0__=6
 -D__HEAP_DEFAULT_MEM__=6
 -D__HEAP_MEM1__=9
--D__HEAP_MEMORY_LIST3__(_P1,_P2)=__HEAP_MEM_HELPER3__(__xdata, 6, _P1, _P2) __HEAP_MEM_HELPER3__(__generic, 9, _P1, _P2)
 -D__MULTIPLE_HEAPS__=1
--D__TOPM_DATA_MEMORY_LIST3__(_P1,_P2)=__TOPM_DATA_MEM_HELPER3__(__bdata, 4, _P1, _P2) __TOPM_DATA_MEM_HELPER3__(__generic, 9, _P1, _P2)
--D__TOPP_DATA_MEMORY_LIST3__(_P1,_P2)=__TOPP_DATA_MEM_HELPER3__(__bdata, 4, _P1, _P2) __TOPP_DATA_MEM_HELPER3__(__xdata, 6, _P1, _P2) __TOPP_DATA_MEM_HELPER3__(__generic, 9, _P1, _P2)
 -D__DEF_HEAP_MEM__=__xdata
 -D__MULTIPLE_INHERITANCE__=0
 -D_CLIB_FP_INF_NAN=1
@@ -387,7 +382,7 @@ D:\BLE-Broadcaster-Software\Projects\ble\Profiles\DevInfo
 -D__XOR_DPSEL_SELECT__=1
 -D__PLAIN_INT_BITFIELD_IS_SIGNED__=1
 -D__HAS_LOCATED_DECLARATION__=1
--D__IAR_COMPILERBASE__=595457
+-D__IAR_COMPILERBASE__=595716
 -D__RO_PLACEMENT_MUST_BE_SAME__=1
 -D__STDC__=1
 -D__STDC_VERSION__=199901L
@@ -446,34 +441,41 @@ D:\BLE-Broadcaster-Software\Projects\ble\Profiles\DevInfo
 -DFRAG_CFG=0x20
 -DHOST_CONFIG=BROADCASTER_CFG
 -DCC2541=1
--D__VERSION__="IAR C/C++ Compiler V10.10.1.4655 for 8051"
+-D__VERSION__="IAR C/C++ Compiler V10.30.1.6000 for 8051"
 -D__CODE_MEMORY_LIST1__()=__CODE_MEM_HELPER1__(__code, 0 )
 -D__CODE_MEMORY_LIST2__(_P1)=__CODE_MEM_HELPER2__(__code, 0 ,  _P1 )
--D__CODE_MEMORY_LIST3__(_P1, _P2)=__CODE_MEM_HELPER3__(__code, 0 ,  _P1 ,  _P2 )
+-D__CODE_MEMORY_LIST3__(_P1,_P2)=__CODE_MEM_HELPER3__(__code, 0 ,  _P1 ,  _P2 )
 -D__DATA_MEMORY_LIST1__()=__DATA_MEM_HELPER1__(__data, 0 )
 -D__DATA_MEMORY_LIST2__(_P1)=__DATA_MEM_HELPER2__(__data, 0 ,  _P1 )
--D__DATA_MEMORY_LIST3__(_P1, _P2)=__DATA_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
+-D__DATA_MEMORY_LIST3__(_P1,_P2)=__DATA_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
 -D__CODE_PTR_MEMORY_LIST1__()=__CODE_PTR_MEM_HELPER1__(__code, 0 )
 -D__CODE_PTR_MEMORY_LIST2__(_P1)=__CODE_PTR_MEM_HELPER2__(__code, 0 ,  _P1 )
--D__CODE_PTR_MEMORY_LIST3__(_P1, _P2)=__CODE_PTR_MEM_HELPER3__(__code, 0 ,  _P1 ,  _P2 )
+-D__CODE_PTR_MEMORY_LIST3__(_P1,_P2)=__CODE_PTR_MEM_HELPER3__(__code, 0 ,  _P1 ,  _P2 )
 -D__DATA_PTR_MEMORY_LIST1__()=__DATA_PTR_MEM_HELPER1__(__data, 0 )
 -D__DATA_PTR_MEMORY_LIST2__(_P1)=__DATA_PTR_MEM_HELPER2__(__data, 0 ,  _P1 )
--D__DATA_PTR_MEMORY_LIST3__(_P1, _P2)=__DATA_PTR_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
+-D__DATA_PTR_MEMORY_LIST3__(_P1,_P2)=__DATA_PTR_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
 -D__VAR_MEMORY_LIST1__()=__VAR_MEM_HELPER1__(__data, 0 )
 -D__VAR_MEMORY_LIST2__(_P1)=__VAR_MEM_HELPER2__(__data, 0 ,  _P1 )
--D__VAR_MEMORY_LIST3__(_P1, _P2)=__VAR_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
+-D__VAR_MEMORY_LIST3__(_P1,_P2)=__VAR_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
 -D__VARD_MEMORY_LIST1__()=__VARD_MEM_HELPER1__(__data, 0, _ )
 -D__HEAP_MEMORY_LIST1__()=__HEAP_MEM_HELPER1__(__data, 0 )
 -D__HEAP_MEMORY_LIST2__(_P1)=__HEAP_MEM_HELPER2__(__data, 0 ,  _P1 )
--D__HEAP_MEMORY_LIST3__(_P1, _P2)=__HEAP_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
+-D__HEAP_MEMORY_LIST3__(_P1,_P2)=__HEAP_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
 -D__HVAR_MEMORY_LIST1__()=__HVAR_MEM_HELPER1__(__data, 0 )
 -D__HEAPD_MEMORY_LIST1__()=__HEAPD_MEM_HELPER1__(__data, 0, _ )
 -D__HEAPU_MEMORY_LIST1__()=__HEAPU_MEM_HELPER1__(__data, 0 )
 -D__TOPM_DATA_MEMORY_LIST1__()=
 -D__TOPM_DATA_MEMORY_LIST2__(_P1)=
--D__TOPM_DATA_MEMORY_LIST3__(_P1, _P2)=
+-D__TOPM_DATA_MEMORY_LIST3__(_P1,_P2)=
 -D__TOPP_DATA_MEMORY_LIST1__()=__TOPP_DATA_MEM_HELPER1__(__data, 0 )
 -D__TOPP_DATA_MEMORY_LIST2__(_P1)=__TOPP_DATA_MEM_HELPER2__(__data, 0 ,  _P1 )
--D__TOPP_DATA_MEMORY_LIST3__(_P1, _P2)=__TOPP_DATA_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
+-D__TOPP_DATA_MEMORY_LIST3__(_P1,_P2)=__TOPP_DATA_MEM_HELPER3__(__data, 0 ,  _P1 ,  _P2 )
 -D__DATA_MEM0_SIZE_TYPE__=unsigned int
 -D__DATA_MEM0_INDEX_TYPE__=signed int
+-D__iar_fp2bits32(x)=0
+-D__iar_fp2bits64(x)=0
+-D__iar_fpgethi64(x)=0
+-D__iar_atomic_add_fetch(x,y,z)=0
+-D__iar_atomic_sub_fetch(x,y,z)=0
+-D__iar_atomic_load(x,y)=0ULL
+-D__iar_atomic_compare_exchange_weak(a,b,c,d,e)=0

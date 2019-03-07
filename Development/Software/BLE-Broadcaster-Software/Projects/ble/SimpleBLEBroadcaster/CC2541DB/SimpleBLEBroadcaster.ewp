@@ -279,7 +279,7 @@
                 </option>
                 <option>
                     <name>OGChipConfigPath</name>
-                    <state>$TOOLKIT_DIR$\config\devices\Texas Instruments\CC2541F256.i51</state>
+                    <state>C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\8051\bin\..\config\devices\Texas Instruments\CC25xx\4x\CC2541F256.i51</state>
                 </option>
             </data>
         </settings>
@@ -2306,6 +2306,12 @@
             <name>$PROJ_DIR$\..\Source\OSAL_SimpleBLEBroadcaster.c</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\..\Source\PowerMeter.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\Source\PowerMeter.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\..\Source\Si7021.c</name>
         </file>
         <file>
@@ -2326,7 +2332,7 @@
         <group>
             <name>Common</name>
             <file>
-                <name>$PROJ_DIR$\..\..\..\..\COMPONENTS\hal\common\hal_drivers.c</name>
+                <name>$PROJ_DIR$\..\..\..\..\Components\hal\common\hal_drivers.c</name>
             </file>
         </group>
         <group>
@@ -2396,7 +2402,7 @@
                         <name>$PROJ_DIR$\..\..\..\..\Components\hal\target\CC2540EB\hal_aes.c</name>
                     </file>
                     <file>
-                        <name>$PROJ_DIR$\..\..\..\..\COMPONENTS\hal\target\CC2540EB\hal_dma.c</name>
+                        <name>$PROJ_DIR$\..\..\..\..\Components\hal\target\CC2540EB\hal_dma.c</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\..\Components\hal\target\CC2540EB\hal_flash.c</name>
@@ -2405,7 +2411,7 @@
                         <name>$PROJ_DIR$\..\..\..\..\Components\hal\target\CC2540EB\hal_i2c.c</name>
                     </file>
                     <file>
-                        <name>$PROJ_DIR$\..\..\..\..\COMPONENTS\hal\target\CC2540EB\hal_key.c</name>
+                        <name>$PROJ_DIR$\..\..\..\..\Components\hal\target\CC2540EB\hal_key.c</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\..\Components\hal\target\CC2540EB\hal_lcd.c</name>
@@ -2414,13 +2420,13 @@
                         <name>$PROJ_DIR$\..\..\..\..\Components\hal\target\CC2540EB\hal_led.c</name>
                     </file>
                     <file>
-                        <name>$PROJ_DIR$\..\..\..\..\COMPONENTS\hal\target\CC2540EB\hal_sleep.c</name>
+                        <name>$PROJ_DIR$\..\..\..\..\Components\hal\target\CC2540EB\hal_sleep.c</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\..\Components\hal\target\CC2540EB\hal_startup.c</name>
                     </file>
                     <file>
-                        <name>$PROJ_DIR$\..\..\..\..\COMPONENTS\hal\target\CC2540EB\hal_timer.c</name>
+                        <name>$PROJ_DIR$\..\..\..\..\Components\hal\target\CC2540EB\hal_timer.c</name>
                     </file>
                     <file>
                         <name>$PROJ_DIR$\..\..\..\..\Components\hal\target\CC2540EB\hal_uart.c</name>
@@ -2486,7 +2492,7 @@
     <group>
         <name>LIB</name>
         <file>
-            <name>$PROJ_DIR$\..\..\LIBRARIES\CC2541DB\bin\CC2541_BLE_bcast.lib</name>
+            <name>$PROJ_DIR$\..\..\Libraries\CC2541DB\bin\CC2541_BLE_bcast.lib</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\Libraries\Common\bin\CC254x_BLE_HCI_TL_None.lib</name>
@@ -2518,7 +2524,7 @@
             <name>$PROJ_DIR$\..\..\..\..\Components\ble\include\bcomdef.h</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\COMPONENTS\osal\common\OSAL.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\Components\osal\common\OSAL.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\Components\osal\common\osal_bufmgr.c</name>
@@ -2527,19 +2533,19 @@
             <name>$PROJ_DIR$\..\..\..\..\Components\osal\common\osal_cbtimer.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\COMPONENTS\osal\common\OSAL_ClockBLE.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\Components\osal\common\OSAL_ClockBLE.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\Components\osal\common\OSAL_Memory.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\COMPONENTS\osal\common\OSAL_PwrMgr.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\Components\osal\common\OSAL_PwrMgr.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\..\..\..\..\Components\osal\mcu\cc2540\osal_snv.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\..\..\..\COMPONENTS\osal\common\OSAL_Timers.c</name>
+            <name>$PROJ_DIR$\..\..\..\..\Components\osal\common\OSAL_Timers.c</name>
         </file>
     </group>
     <group>

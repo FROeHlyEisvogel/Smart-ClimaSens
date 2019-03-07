@@ -9,6 +9,9 @@
 #define BME280_EVENT            0x0010
 #define HTU21D_TEMP_EVENT       0x0020
 #define HTU21D_HUM_EVENT        0x0040
+#define BLINK_LED_EVENT         0x0080
+#define POWERMETER_EVENT        0x0100
+#define CONTACT_EVENT           0x0200
 
 #define HAL_I2C                 TRUE
 #define HAL_I2C_MASTER          TRUE
@@ -25,9 +28,18 @@ void init_luminance_sensor (void);
 void start_luminance_sensor (void);
 void read_luminance_sensor (void);
 
+void blink_LED (uint16 durationMs, uint8 count);
+void blink_LED_off (void);
+
 void init_adc (void);
 void init_SupplySensor (void);
-void init_Contact (void);
 uint8 read_Contact (void);
+void init_Touch (void);
+
+void init_Contact (void);
+void start_Contact (void);
+
+void init_powermeter (void);
+void start_powermeter (void);
 
 #endif /* APPLICATION_H */

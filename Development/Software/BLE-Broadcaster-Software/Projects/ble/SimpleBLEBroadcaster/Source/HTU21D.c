@@ -82,7 +82,7 @@ uint8 read_humidity_HTU21D (uint16 *hum) {
   *hum = (uint16)(humidity * 100);
   
   // Soft reset
-  soft_reset_HTU21D ();
+  //soft_reset_HTU21D ();
   
   HalI2CEnterSleep ();
   return 1;

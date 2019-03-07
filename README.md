@@ -1,21 +1,6 @@
-Smart-ClimaSens
+Development
 ====================
 
-The Smart-ClimaSens can be used with pimatic, an installation guide can be found here:
-https://github.com/FROeHlyEisvogel/Smart-ClimaSens/blob/master/Instructions/Introduction%20(windows).pdf
-
-What is Smart-ClimaSens?
-------------------------
-It is a wireless sensor for measuring the indoor climate.
-
-What are the benefits of Smart-ClimaSens?
------------------------------------------
-The device is built with very low cost and a long durability.
-
-How does Smart-ClimaSens work?
-------------------------------
-The Smart-ClimaSens device measures different data like temperature, humidity, light, … and provides this live data over undirected Bluetooth broadcast messages.
-
-Which knowledge or skills are needed to build a Smart-ClimaSens device?
------------------------------------------------------------------------
-All you need is basic knowledge in soldering.
+Source code for the ClimaSens-Devices.
+Develop environment is IAR 8051.
+You can get a 30 days free trial on the IAR homepage.

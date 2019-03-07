@@ -1149,6 +1149,7 @@ extern llStatus_t LL_DirectTestEnd( void );
  * @return      LL_STATUS_SUCCESS, LL_STATUS_ERROR_BAD_PARAMETER,
  *              LL_STATUS_ERROR_NO_ADV_CHAN_FOUND
  */
+
 extern llStatus_t LL_SetAdvParam( uint16 advIntervalMin,
                                   uint16 advIntervalMax,
                                   uint8  advEvtType,
@@ -2594,6 +2595,7 @@ extern llStatus_t LL_EXT_GetConnInfo( uint8 *numAllocConns,
  *
  * @return      None.
  */
+error
 extern void LL_ConnectionCompleteCback( uint8  reasonCode,
                                         uint16 connId,
                                         uint8  role,

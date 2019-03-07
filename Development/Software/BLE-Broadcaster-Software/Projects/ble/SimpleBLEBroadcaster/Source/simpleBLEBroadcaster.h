@@ -67,6 +67,7 @@ extern "C"
 #define SBP_PERIODIC_EVT                                  0x0002
 #define SBP_ADV_IN_CONNECTION_EVT                         0x0004
 #define SBP_STOP_ADVERTISE                                0x0008
+#define SBP_UPDATE_ADVERTISE                              0x0010
 
 /*********************************************************************
  * MACROS
@@ -88,6 +89,7 @@ extern uint16 SimpleBLEBroadcaster_ProcessEvent( uint8 task_id, uint16 events );
 
 void Advertise_init (void);
 void Advertise_single (void);
+void Advertise_count (uint8 count);
 
 extern void AdverisingUpdate_Internal_Voltage (uint16 Voltage);
 extern void AdverisingUpdate_Internal_Temperature (uint16 Temperature);
@@ -95,7 +97,8 @@ extern void AdverisingUpdate_Luminance (uint16 Luminance);
 extern void AdverisingUpdate_Temperature (int16 Temperature);
 extern void AdverisingUpdate_Humidity (uint16 Humidity);
 extern void AdverisingUpdate_Barometric (uint16 Barometric);
-extern void AdverisingUpdate_Contact (uint8 Contact);
+extern void AdverisingUpdate_Contact (uint8 Mask, uint8 State);
+extern void AdverisingUpdate_Powermeter (uint16 Power);
 
 /*********************************************************************
 *********************************************************************/

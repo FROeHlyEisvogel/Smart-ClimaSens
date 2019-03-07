@@ -10,21 +10,26 @@
 #define Si7021                  TRUE
 #define BME280                  TRUE
 #define HTU21D                  TRUE
-#define CONTACT_INTERRUPT       FALSE
+#define CONTACT                 TRUE
+#define TOUCH                   TRUE
+#define POWERMETER              FALSE
 
 // Time defines in ms
 #define INIT_DELAY              1000
-#define INTERVALL               1000 * 20
 #define LUMINANCE_DELAY1        25
 #define LUMINANCE_DELAY2        1000
 #define HTU21D_DELAY            15
 #define Si7021_DELAY            15
 #define BME280_DELAY            15
+#define CONTACT_DELAY           1
+
+#define INTERVALL_SECONDS                       25
+#define INTERVALL                               (1000 * INTERVALL_SECONDS)
 
 #define INTERNAL_VOLTAGE_INTERVALL_SECONDS      60
 #define INTERNAL_VOLTAGE_INTERVALL              (INTERNAL_VOLTAGE_INTERVALL_SECONDS / (INTERVALL / 1000))
 
-#define LUMINANCE_SENSOR_INTERVALL_SECONDS      1
+#define LUMINANCE_SENSOR_INTERVALL_SECONDS      60
 #define LUMINANCE_SENSOR_INTERVALL              (LUMINANCE_SENSOR_INTERVALL_SECONDS / (INTERVALL / 1000))
 
 #define Si7021_INTERVALL_SECONDS                60
@@ -33,11 +38,11 @@
 #define BME280_INTERVALL_SECONDS                60
 #define BME280_INTERVALL                        (BME280_INTERVALL_SECONDS / (INTERVALL / 1000))
 
-#define HTU21D_INTERVALL_SECONDS                1
+#define HTU21D_INTERVALL_SECONDS                60
 #define HTU21D_INTERVALL                        (HTU21D_INTERVALL_SECONDS / (INTERVALL / 1000))
 
-#define REF_125V_CONVERSION     0.61065         // Conversion constant for 1.24V Reference
-#define TEMP_COEFF              2.43            // Temperaturkoeffitient
+#define REF_125V_CONVERSION     0.61065         // Convertation constant for 1.24V Reference
+#define TEMP_COEFF              2.43            // Temperaturekoeffitient
 #define TEMP_OFFSET             (750 + 50)      // Datasheet
 
 ///////////////////////////////
@@ -52,6 +57,7 @@
 #include "BME280.h"
 #include "Si7021.h"
 #include "HTU21D.h"
+#include "PowerMeter.h"
 
 // Drivers
 #include "hal_adc.h"
@@ -99,10 +105,22 @@ void init_Modules (void) {
     HTU21D_init_state = init_HTU21D ();
   }
 #endif
+
+#if POWERMETER == TRUE
+  init_powermeter ();
+#endif
   
   Advertise_init ();
-  
+
+#if CONTACT == TRUE
   init_Contact ();
+#endif
+  
+#if TOUCH == TRUE
+  init_Touch ();
+#endif
+  
+  blink_LED (500, 3);
 }
 
 uint16 Application_ProcessEvent (uint8 task_id, uint16 events) {
@@ -176,7 +194,10 @@ uint16 Application_ProcessEvent (uint8 task_id, uint16 events) {
     }
 #endif
     
-    AdverisingUpdate_Contact (read_Contact());
+#if CONTACT == TRUE
+    start_Contact ();
+    osal_start_timerEx ( Application_TaskID, CONTACT_EVENT, CONTACT_DELAY);
+#endif
     
 #if INTERNAL_VOLTAGE == TRUE
     static uint16 internal_voltage_intervall_counter = 0xFFFF;
@@ -189,6 +210,12 @@ uint16 Application_ProcessEvent (uint8 task_id, uint16 events) {
     
 #if ADVERTISE == TRUE
     Advertise_single ();
+#endif
+    
+#if POWERMETER == TRUE
+    //start_powermeter ();
+    read_powermeter ();
+    AdverisingUpdate_Powermeter (get_current_powermeter ());
 #endif
     
     return ( events ^ INTERVALL_EVENT);
@@ -239,6 +266,21 @@ uint16 Application_ProcessEvent (uint8 task_id, uint16 events) {
     return ( events ^ HTU21D_HUM_EVENT);
   }
   
+  if ( events & BLINK_LED_EVENT ) {
+    blink_LED (0,0);
+    return ( events ^ BLINK_LED_EVENT);
+  }
+  
+  if ( events & POWERMETER_EVENT ) {
+    read_powermeter ();
+    return ( events ^ POWERMETER_EVENT);
+  }
+  
+  if ( events & CONTACT_EVENT ) {
+    AdverisingUpdate_Contact (1, read_Contact());
+    return ( events ^ CONTACT_EVENT);
+  }
+  
   return 0;
 }
 
@@ -281,9 +323,11 @@ void init_luminance_sensor (void) {
 
 static uint16 luminanceDelay = LUMINANCE_DELAY1;
 void start_luminance_sensor (void) {
-  P0DIR &= ~1;           // Input
-  APCFG |= 1;            // configurate PIN0_0 as ADC-Input for luminance sensor
-  osal_start_timerEx ( Application_TaskID, LUMINANCE_EVENT, luminanceDelay);
+  if (P0_0 == 0) {
+    P0DIR &= ~1;           // Input
+    APCFG |= 1;            // configurate PIN0_0 as ADC-Input for luminance sensor
+    osal_start_timerEx ( Application_TaskID, LUMINANCE_EVENT, luminanceDelay);
+  }
 }
 
 void read_luminance_sensor (void) {
@@ -306,18 +350,40 @@ void read_luminance_sensor (void) {
   P0_0 = 0;             // GND
 }
 
+void blink_LED (uint16 durationMs, uint8 count) {
+  static uint8 countT;
+  static uint16 duartionMsT;
+  if (durationMs != 0) {
+    countT = count;
+    duartionMsT = durationMs;
+  }
+  if (countT > 0) {
+    if (P0_0 == 1) {
+      P0_0 = 0;
+    }
+    else {
+      P0_0 = 1;             // Vcc
+      countT = countT - 1;
+    }
+    osal_start_timerEx ( Application_TaskID, BLINK_LED_EVENT, duartionMsT);
+  }
+  else {
+    P0_0 = 0;               // GND
+  }
+}
+
 void init_SupplySensor (void) {
   // Initialize P1_0 for VCC
   P1SEL &= ~1;            // Function as General Purpose I/O.
   P1_0 = 1;               // VCC
   P1DIR |= 1;             // Output
-  P1INP |= 1;             // Disable pullup / pulldown
+  //P1INP |= 1;             // Disable pullup / pulldown
   
   // Initialize P1_4 for GND
   P1SEL &= ~16;           // Function as General Purpose I/O.
   P1_4 = 0;               // GND
   P1DIR |= 16;            // Output
-  P1INP |= 16;            // Disable pullup / pulldow
+  //P1INP |= 16;            // Disable pullup / pulldown
 }
 
 void init_Contact (void) {
@@ -325,51 +391,84 @@ void init_Contact (void) {
   P1SEL &= ~2;            // Function as General Purpose I/O.
   P1_1 = 1;               // VCC
   P1DIR |= 2;             // Output
-  P1INP |= 2;             // Disable pullup / pulldown
   
   // Initialize P1_2 as Input
   P1SEL &= ~4;            // Function as General Purpose I/O.
-  P1_2 = 0;               // GND
+  //P1_2 = 0;               // GND
   P1DIR &= ~4;            // Input
-  P1INP |= 4;             // Disable pullup / pulldown
+  //P1INP |= 4;             // Disable pullup / pulldown
 
   P2INP |= 64;            // Port1 Pulldown
-  
-#if CONTACT_INTERRUPT == TRUE
-  // Initialize P1_2 as Interrupt
-  P1IEN |= 4;             // Interrupt Mask
-  PICTL &= ~2;            // Interrupt on rising Edge
-  P1IFG &= ~4;            // Clear Interrupt
-  IEN2 |= 16;             // Enable Interrupts on Port 1
-#endif
+  P1INP &= ~4;            // Enable pullup / pulldown
 }
 
-HAL_ISR_FUNCTION( halKeyPort1Isr, P1INT_VECTOR ) {
+void start_Contact (void) {
+  P1INP &= ~4;             // Enable pullup / pulldown
+}
+
+uint8 read_Contact (void) {
+  uint8 temp_Contact = P1_2;
+  P1INP |= 4;              // Disable pullup / pulldown
+  return temp_Contact;
+}
+
+void init_Touch (void) { 
+  // Initialize P0_3 for VCC
+  P0SEL &= ~8;            // Function as General Purpose I/O.
+  P0_3 = 1;               // VCC
+  P0DIR |= 8;             // Output
+  
+  // Initialize P0_4 as GND
+  P0SEL &= ~16;           // Function as General Purpose I/O.
+  P0_4 = 0;               // GND
+  P0DIR |= 16;            // Output
+
+  // Initialize P0_5 as Input
+  P0SEL &= ~32;           // Function as General Purpose I/O.
+  P0_5 = 0;               // GND
+  P0DIR &= ~32;           // Input
+  P0INP |= 32;            // Disable pullup / pulldown
+  
+  // Initialize P0_5 as Interrupt
+  P0IEN |= 32;            // Interrupt Mask
+  PICTL &= ~1;            // Interrupt on rising Edge
+  P0IFG &= ~32;           // Clear Interrupt
+  IEN1 |= 32;             // Enable Interrupts on Port 0
+}
+
+// Interrupts Port0
+HAL_ISR_FUNCTION( halKeyPort0Isr, P0INT_VECTOR ) {
   HAL_ENTER_ISR();
   
-  if (read_Contact() == 1) {
-    AdverisingUpdate_Contact (1);
-    PICTL |= 2;           // Interrupt on falling Edge
-  }
-  else {
-    AdverisingUpdate_Contact (0);
-    PICTL &= ~2;          // Interrupt on rising Edge
-  }
-  
-  Advertise_single ();
+#if TOUCH == TRUE
+  if (P0_5 == 1) {
+    AdverisingUpdate_Contact (2, 1);
+    
+    Advertise_count (5);
 
-  P1IFG &= ~4;            // Clear Interrupt
-  P1IF   = 0;             // Clear Port Interrupt
+    AdverisingUpdate_Contact (2, 0);
   
+    blink_LED (1000, 1);
+
+    P0IFG &= ~32;            // Clear P0_5 Interrupt
+    P0IF   = 0;              // Clear Port0 Interrupt
+  }
+#endif
+
+#if POWERMETER == TRUE 
+  if (P0_1 == 1) {
+    
+    //set_t1_powermeter ();
+    //osal_set_event( Application_TaskID, POWERMETER_EVENT );
+    
+    P0IFG &= ~2;            // Clear P0_1 Interrupt
+    IRCON &= ~32;           // Clear Port0 Interrupt
+  }
+#endif
+  
+  IRCON &= ~32;            // Clear Port0 Interrupt
   CLEAR_SLEEP_MODE();
   HAL_EXIT_ISR();
   
   return;
-}
-
-uint8 read_Contact (void) {
-  P1INP &= ~4;             // Enable pullup / pulldown
-  uint8 temp_Contact = P1_2;
-  P1INP |= 4;              // Disable pullup / pulldown
-  return temp_Contact;
 }
