@@ -13,6 +13,8 @@ This is the main module of the Smart-ClimaSens Project.
 It measures teamperature, humidity and brightness (optionally also barometric) and broadcasts it using Bluetooth Low Energy.
 The device is designed to reduce as less energy as possible while beeing as cheep as possible.
 
+<img src="Screenshots/Overview.jpg" alt="Overview"/>
+
 ### Flexibility
 
 The Smart-ClimaSens is based on a CC2541 - BLE-Controller.
