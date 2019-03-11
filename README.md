@@ -1,13 +1,17 @@
 # Introduction
 
+This document gives an overview about the Smart-ClimaSens project.
+
 ### New: Android App available
 https://github.com/FROeHlyEisvogel/ClimaSens-Scanner/raw/master/Application/build/outputs/apk/debug/ClimaSensScanner-debug.apk
 
-# Smart-ClimaSens
+# ClimaSens-Sensor
 
 <img src="Screenshots/ClimaSens-Sensor_Animation.gif" width="250" height="250" alt="Animated-gif"/><img src="Screenshots/ClimaSens-Sensor.PNG" width="250" height="250" alt="ClimaSens-Sensor"/>
 
-This document gives an overview about the Smart-ClimaSens project.
+This is the main module of the Smart-ClimaSens Project.
+It measures teamperature, humidity and brightness (optionally also barometric) and broadcasts it using Bluetooth Low Energy.
+The device is designed to reduce as less energy as possible while beeing as cheep as possible.
 
 ### Flexibility
 
