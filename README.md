@@ -5,6 +5,8 @@ https://github.com/FROeHlyEisvogel/ClimaSens-Scanner/raw/master/Application/buil
 
 # Smart-ClimaSens
 
+<img src="Screenshots/ClimaSens-Sensor_Animation.gif" width="250" height="250" alt="Animated-gif"/><img src="Screenshots/ClimaSens-Sensor.PNG" width="250" height="250" alt="ClimaSens-Sensor"/>
+
 This document gives an overview about the Smart-ClimaSens project.
 
 ### Flexibility
