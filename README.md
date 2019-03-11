@@ -38,7 +38,7 @@ There are a lot of things you don&#39;t have to build yourself because if you bu
 
 All you have to do to build this sensor is connecting modules together.
 No programming knowledge, no electronic knowledge and no linux knowledge is needed.
-Each step is describes in words, pictures or drawings if needed.
+Each step is described in words, pictures or drawings if needed.
 
 ### Small size
 
